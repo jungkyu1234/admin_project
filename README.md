@@ -53,7 +53,7 @@ cd spring-mvc-project
 ./mvn clean install
 ```
 
-3. 애플리케이션 실행
+3. 애플리케이션 실행..
 
 ```bash
 java -jar build/libs/spring-mvc-project.jar
