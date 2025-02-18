@@ -1,0 +1,1 @@
+docker run --name admindb -d -v admindb-volume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=admindb -p3306:3306 mysql:8.0

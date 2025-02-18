@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.human.admin.mapper.EmployeeMapper">
+
+    <select id="findAll" resultType="com.human.admin.dto.EmployeeDto">
+        select
+        employee_id as id,
+        employee_name as name,
+        employee_email as email,
+        phone_number as phone_number,
+        employee_address as address
+        from employee
+        LIMIT 5 OFFSET #{row}
+    </select>
+
+    <delete id="deleteEmployee" parameterType="java.lang.Long">
+        delete from employee
+        where employee_id = #{id}
+    </delete>
+
+    <update id="updateEmployee" parameterType="com.human.admin.dto.EmployeeDto">
+        update employee
+        set
+        <trim prefix="" suffix="" suffixOverrides=",">
+        <if test="email != null">
+            employee_email = #{email},
+        </if>
+        <if test="name != null">
+            employee_name = #{name},
+        </if>
+        <if test="phoneNumber != null">
+            phone_number = #{phoneNumber},
+        </if>
+        <if test="address != null">
+            employee_address = #{address}
+        </if>
+        </trim>
+        where employee_id = #{id}
+    </update>
+
+</mapper>
