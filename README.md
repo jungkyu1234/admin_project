@@ -50,7 +50,7 @@ cd spring-mvc-project
 2. 의존성 설치 및 빌드
 
 ```bash
-./gradlew build
+./mvn clean install
 ```
 
 3. 애플리케이션 실행
