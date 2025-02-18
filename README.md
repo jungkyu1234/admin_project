@@ -58,6 +58,8 @@ cd spring-mvc-project
 ```bash
 java -jar build/libs/spring-mvc-project.jar
 ```
+## 프로필
+- 저는 백엔드 개발자 입니다.
 
 ## 기여
 - 본 프로젝트는 개인 프로젝트로, 모든 코드는 직접 작성하였습니다.
